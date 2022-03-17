@@ -13,13 +13,15 @@
 .button-black {
   color: white;
   background-color: $color-black;
-}
-
-.button-black:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .button-yellow {
   color: $color-black;
   background-color: $color-primary;
+  &:hover {
+    background-color: $color-primary-shade;
+  }
 }

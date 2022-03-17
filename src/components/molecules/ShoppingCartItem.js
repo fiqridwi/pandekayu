@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteProduct, deleteItem } from "../../actions";
 import Swal from "sweetalert2";
-
-const CartItem = ({ data }) => {
+import Icon from "@mui/material/Icon";
+const ShoppingCartItem = ({ data }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deleteProduct(data.id));
@@ -12,7 +12,7 @@ const CartItem = ({ data }) => {
       icon: "info",
       title: "Produk dihapus dari keranjang",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
   };
   return (
@@ -30,10 +30,15 @@ const CartItem = ({ data }) => {
         </div>
       </div>
       <div className="cart-item-right">
-        <button onClick={() => handleDelete()}>Delete</button>
+        <button
+          className="cart-item-delete-button"
+          onClick={() => handleDelete()}
+        >
+          <Icon fontSize="large">delete</Icon>
+        </button>
       </div>
     </div>
   );
 };
 
-export default CartItem;
+export default ShoppingCartItem;

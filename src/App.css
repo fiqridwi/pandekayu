@@ -22,7 +22,6 @@
   color: white;
   background-color: #000000;
 }
-
 .button-black:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -30,6 +29,9 @@
 .button-yellow {
   color: #000000;
   background-color: #f9ca24;
+}
+.button-yellow:hover {
+  background-color: #e0b720;
 }
 
 *,
@@ -94,6 +96,13 @@ nav {
 .nav-cart {
   display: flex;
   color: #000000;
+}
+.nav-cart-value {
+  background-color: #f9ca24;
+  border-radius: 50px;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.3rem;
 }
 .nav-cart a {
   color: #000000;
@@ -234,58 +243,34 @@ nav {
   transition: all 1.5;
 }
 
-.cart {
-  margin: 3rem 20rem 0;
-}
-
-.cart-value {
-  background-color: #f9ca24;
-  border-radius: 50px;
-  height: 2rem;
-  width: 2rem;
-  font-size: 1.3rem;
-}
-
 .shopping-cart {
+  margin: 3rem 27rem 0;
+}
+.shopping-cart-container {
   display: flex;
   justify-content: space-between;
 }
-
-.cart-summary {
+.shopping-cart-summary {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
-  border: 1px solid #000000;
+  border-radius: 4px;
   align-items: left;
   height: 14rem;
   width: 20rem;
   padding: 1rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
-
-.cart-total {
+.shopping-cart-summary-total {
   display: flex;
   justify-content: space-between;
 }
-
-.line {
+.shopping-cart-summary-line {
   height: 1px;
   background-color: #000000;
 }
-
-.cart-item {
-  display: flex;
-  align-items: center;
-}
-
-.cart-item-left {
-  display: flex;
-}
-
-.cart-item-thumb img {
-  width: 10rem;
-}
-
-.payment-button {
+.shopping-cart-payment-button {
+  cursor: pointer;
   display: flex;
   align-items: center;
   text-align: center;
@@ -300,6 +285,38 @@ nav {
   background-color: #f9ca24;
   border: none;
   align-self: center;
+}
+.shopping-cart-payment-button:hover {
+  background-color: #e0b720;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 35rem;
+}
+.cart-item-left {
+  display: flex;
+  align-items: center;
+}
+.cart-item-thumb img {
+  width: 10rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+.cart-item-delete-button {
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+}
+.cart-item-delete-button:hover {
+  cursor: pointer;
+  color: red;
 }
 
 .swal2-confirm a {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import CartItem from "../components/molecules/CartItem";
+import ShoppingCartItem from "../components/molecules/ShoppingCartItem";
 import Swal from "sweetalert2";
 import Icon from "@mui/material/Icon";
 const ShoppingCart = () => {
@@ -14,10 +14,8 @@ const ShoppingCart = () => {
   const handlePaymentDialog = () => {
     Swal.fire({
       title: "<strong>Tertarik dengan produk kami ? :)</strong>",
-      icon: "info",
       confirmButtonColor: "#03AC0E",
       html: "Produk kami dapat dipesan melalui Tokopedia ",
-      showCloseButton: true,
       showCancelButton: true,
       focusConfirm: false,
       confirmButtonText:
@@ -29,25 +27,29 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div className="cart">
-      <h1>Keranjang</h1>
-      <div className="shopping-cart">
+    <div className="shopping-cart">
+      <h1 className="margin-bottom-3">Keranjang</h1>
+      <div className="shopping-cart-container">
         <div className="cart-list">
-          {products.products.map((data, i) => {
-            return <CartItem data={data} key={i} />;
-          })}
+          {products.products.length < 1 ? (
+            <p>Keranjang belanja Anda kosong</p>
+          ) : (
+            products.products.map((data, i) => {
+              return <ShoppingCartItem data={data} key={i} />;
+            })
+          )}
         </div>
-        <div className="cart-summary">
+        <div className="shopping-cart-summary">
           <p style={{ marginBottom: "2rem" }}>Ringkasan belanja</p>
           <p style={{ color: "grey" }}>{`${item} Produk`}</p>
-          <div className="line"></div>
-          <div className="cart-total">
+          <div className="shopping-cart-summary-line"></div>
+          <div className="shopping-cart-summary-total">
             <p style={{ fontWeight: "bolder" }}>Total</p>
             <p>{`Rp. ${total}`}</p>
           </div>
 
           <button
-            className="payment-button"
+            className="shopping-cart-payment-button"
             onClick={() => handlePaymentDialog()}
           >
             Bayar <Icon>payment</Icon>

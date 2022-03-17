@@ -30,7 +30,7 @@ const Navbar = () => {
           <Icon fontSize="large">shopping_bag</Icon>
         </Link>
 
-        <p className="cart-value">{item}</p>
+        <p className="nav-cart-value">{item}</p>
       </div>
     </nav>
   );

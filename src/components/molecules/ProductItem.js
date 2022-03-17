@@ -20,7 +20,7 @@ const ProductItem = ({ name, price, id }) => {
       icon: "success",
       title: "Berhasil ditambahkan ke keranjang",
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
   };
 

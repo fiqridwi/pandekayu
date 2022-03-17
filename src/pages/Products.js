@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import ProductItem from "../components/molecules/ProductItem";
 import { fetchProductData } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
+import loadingGIF from "../images/icons/loading.gif";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -14,9 +15,11 @@ const Products = () => {
 
   return (
     <div className="products">
-      <h1>Produk Kami</h1>
+      <h1 className="margin-bottom-3">Produk Kami</h1>
       <div className="products-list">
-        {product.product[0] &&
+        {product.product.length < 1 ? (
+          <img src={loadingGIF} alt="loading-gif" />
+        ) : (
           product.product[0].map((item, i) => {
             return (
               <ProductItem
@@ -26,7 +29,8 @@ const Products = () => {
                 id={item.id}
               />
             );
-          })}
+          })
+        )}
       </div>
     </div>
   );
