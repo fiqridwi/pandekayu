@@ -3,7 +3,7 @@ import Icon from "@mui/material/Icon";
 
 const InfoSection = () => {
   return (
-    <div className="info-section">
+    <div className="info">
       <div className="info-item">
         <div className="info-icon">
           <Icon fontSize="large">thumb_up</Icon>

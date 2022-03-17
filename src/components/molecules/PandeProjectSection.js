@@ -5,12 +5,12 @@ import Button from "../atoms/Button";
 
 const PandeProjectSection = () => {
   return (
-    <div className="project-section">
+    <div className="project">
       <div className="project-image">
         <img src={pandeProject} alt="pande-project" />
       </div>
       <div className="project-text">
-        <div className="project-title">
+        <div className="margin-bottom-3">
           <h2>Wujudkan desain furniture impian</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas

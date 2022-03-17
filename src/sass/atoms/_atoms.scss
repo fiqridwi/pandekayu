@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  width: 15rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.button-black {
+  color: white;
+  background-color: $color-black;
+}
+
+.button-black:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.button-yellow {
+  color: $color-black;
+  background-color: $color-primary;
+}

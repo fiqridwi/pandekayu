@@ -26,22 +26,20 @@ const ProductItem = ({ name, price, id }) => {
 
   return (
     <div className="product-item">
-      <div className="product-item-container">
-        <div className="product-item-thumbnail">
-          <img
-            className="thumbnail"
-            src={require(`../../images/products/${id}.jpg`)}
-            alt="thumbnail"
-          />
-        </div>
+      <div>
+        <img
+          className="product-item-thumbnail"
+          src={require(`../../images/products/${id}.jpg`)}
+          alt="thumbnail"
+        />
         <div className="product-item-text">
           <h3>{name}</h3>
-          <p>{`Rp. ${price}`}</p>
+          <p>{`Rp. ${price}`}</p>{" "}
         </div>
-        <button onClick={() => handleAddItem()} className="add-to-cart-button">
-          <Icon>add_shopping_cart</Icon>
-        </button>
       </div>
+      <button onClick={() => handleAddItem()} className="product-item-button">
+        <Icon>add_shopping_cart</Icon>
+      </button>
     </div>
   );
 };
