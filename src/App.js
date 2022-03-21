@@ -5,8 +5,9 @@ import Navbar from "./components/molecules/Navbar";
 
 import Products from "./pages/Products";
 import ShoppingCart from "./pages/ShoppingCart";
-import PandeProject from "./pages/PandeProject";
+import PandeProjects from "./pages/PandeProjects";
 import Home from "./pages/Home";
+import Footer from "./components/molecules/Footer";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="products" element={<Products />} />
-        <Route path="pande-project" element={<PandeProject />} />
+        <Route path="pande-projects" element={<PandeProjects />} />
         <Route path="cart" element={<ShoppingCart />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

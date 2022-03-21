@@ -1,0 +1,149 @@
+.page-title {
+  margin: 0 0 3rem 7rem;
+}
+
+// PRODUCTS PAGE
+.products {
+  margin: 3rem 15rem;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  max-width: 20rem;
+  height: 30rem;
+  padding: 1rem;
+  border: 1px solid rgb(218, 218, 218);
+  border-radius: 5px;
+  &-thumbnail {
+    width: 17rem;
+    border-radius: 5px;
+  }
+  &-button {
+    background-color: $color-primary;
+    cursor: pointer;
+    border: none;
+    width: 17rem;
+    height: 3rem;
+    border-radius: 3px;
+    &:hover {
+      background-color: $color-primary-shade;
+      transition: all 1.5;
+    }
+  }
+}
+
+//SHOPPING CART PAGE
+.shopping-cart {
+  margin: 3rem 27rem 10rem;
+  font-size: 1.2rem;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-summary {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    align-items: left;
+    height: 18rem;
+    width: 23rem;
+    padding: 2rem;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    &-total {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-line {
+      height: 1px;
+      background-color: $color-black;
+    }
+  }
+  &-payment-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: $color-black;
+    background-color: $color-primary;
+    border: none;
+    align-self: center;
+    &:hover {
+      background-color: $color-primary-shade;
+    }
+  }
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 40rem;
+
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+  &-thumb img {
+    width: 10rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+  }
+  &-delete-button {
+    color: red;
+    background-color: $color-white;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      color: rgb(185, 0, 0);
+    }
+  }
+}
+
+.swal2-confirm a {
+  color: $color-white;
+  text-decoration: none;
+}
+
+//PANDEPROJECTS PAGE
+.pandeprojects {
+  margin: 3rem 15rem 0;
+  &-procedure {
+    font-size: 1.4rem;
+    padding: 0 7rem;
+    &-item {
+      display: flex;
+      align-items: center;
+      &-icon {
+        margin-right: 2rem;
+      }
+    }
+  }
+  &-contact {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+    font-size: 1.4rem;
+  }
+}

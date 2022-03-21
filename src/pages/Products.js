@@ -15,7 +15,7 @@ const Products = () => {
 
   return (
     <div className="products">
-      <h1 className="margin-bottom-3">Produk Kami</h1>
+      <h1 className="page-title">Produk Kami</h1>
       <div className="products-list">
         {product.product.length < 1 ? (
           <img src={loadingGIF} alt="loading-gif" />

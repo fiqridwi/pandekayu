@@ -21,8 +21,8 @@ const Navbar = () => {
         <Link className="nav-menu-item margin-menu-nav" to="/products">
           Produk
         </Link>
-        <Link className="nav-menu-item" to="/pande-project">
-          PandeProject
+        <Link className="nav-menu-item" to="/pande-projects">
+          PandeProjects
         </Link>
       </div>
       <div className="nav-cart">

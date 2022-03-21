@@ -68,7 +68,7 @@ nav {
   width: 100%;
   text-align: center;
   align-items: center;
-  padding: 0 20rem;
+  padding: 0 17rem;
   font-size: 1.6rem;
   position: sticky;
   overflow: hidden;
@@ -85,10 +85,10 @@ nav {
 }
 .nav-menu-item {
   padding: 1rem;
+  border-radius: 5px;
 }
 .nav-menu-item:hover {
   background-color: #f9ca24;
-  border-radius: 5px;
 }
 .nav-logo img {
   width: 4rem;
@@ -205,8 +205,57 @@ nav {
   margin-right: 3rem;
 }
 
+footer {
+  height: 34vh;
+  text-align: center;
+  background-color: rgba(235, 235, 235, 0.521);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem auto;
+}
+.footer a {
+  color: #181818;
+  text-decoration: none;
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.footer-item-title {
+  font-size: 1.4rem;
+}
+.footer-item-2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5rem;
+  text-align: left;
+}
+.footer-credit {
+  display: flex;
+  margin: 0.5rem auto;
+  justify-content: center;
+  align-items: center;
+}
+.footer-credit p {
+  margin-right: 0.4rem;
+}
+.footer-credit a {
+  color: black;
+}
+
+.page-title {
+  margin: 0 0 3rem 7rem;
+}
+
 .products {
-  margin: 3rem 15rem 0;
+  margin: 3rem 15rem;
 }
 .products-list {
   display: flex;
@@ -244,7 +293,8 @@ nav {
 }
 
 .shopping-cart {
-  margin: 3rem 27rem 0;
+  margin: 3rem 27rem 10rem;
+  font-size: 1.2rem;
 }
 .shopping-cart-container {
   display: flex;
@@ -254,11 +304,12 @@ nav {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  font-size: 1.2rem;
   border-radius: 4px;
   align-items: left;
-  height: 14rem;
-  width: 20rem;
-  padding: 1rem;
+  height: 18rem;
+  width: 23rem;
+  padding: 2rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 .shopping-cart-summary-total {
@@ -295,10 +346,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  padding: 2rem;
+  padding: 2rem 3rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 35rem;
+  width: 40rem;
 }
 .cart-item-left {
   display: flex;
@@ -310,13 +361,13 @@ nav {
   border-radius: 5px;
 }
 .cart-item-delete-button {
-  color: #000000;
+  color: red;
   background-color: #ffffff;
   border: none;
 }
 .cart-item-delete-button:hover {
   cursor: pointer;
-  color: red;
+  color: #b90000;
 }
 
 .swal2-confirm a {
@@ -324,36 +375,25 @@ nav {
   text-decoration: none;
 }
 
-footer {
-  height: 15rem;
-  text-align: center;
-  background-color: rgba(235, 235, 235, 0.521);
-  display: flex;
-  padding: 2rem;
+.pandeprojects {
+  margin: 3rem 15rem 0;
 }
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-}
-.footer a {
-  color: #333333;
-  text-decoration: none;
-}
-.footer-item {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.footer-item-title {
+.pandeprojects-procedure {
   font-size: 1.4rem;
+  padding: 0 7rem;
 }
-.footer-item-2 {
+.pandeprojects-procedure-item {
   display: flex;
-  flex-direction: column;
-  margin: 0 3rem;
-  text-align: left;
+  align-items: center;
+}
+.pandeprojects-procedure-item-icon {
+  margin-right: 2rem;
+}
+.pandeprojects-contact {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=App.css.map */

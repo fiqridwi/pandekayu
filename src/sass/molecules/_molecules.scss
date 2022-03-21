@@ -6,7 +6,7 @@ nav {
   width: 100%;
   text-align: center;
   align-items: center;
-  padding: 0 20rem;
+  padding: 0 17rem;
   font-size: 1.6rem;
   position: sticky;
   overflow: hidden;
@@ -24,9 +24,9 @@ nav {
   }
   &-menu-item {
     padding: 1rem;
+    border-radius: 5px;
     &:hover {
       background-color: $color-primary;
-      border-radius: 5px;
     }
   }
 
@@ -153,144 +153,21 @@ nav {
   }
 }
 
-// PRODUCTS PAGE
-.products {
-  margin: 3rem 15rem 0;
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-.product-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem;
-  max-width: 20rem;
-  height: 30rem;
-  padding: 1rem;
-  border: 1px solid rgb(218, 218, 218);
-  border-radius: 5px;
-  &-thumbnail {
-    width: 17rem;
-    border-radius: 5px;
-  }
-  &-button {
-    background-color: $color-primary;
-    cursor: pointer;
-    border: none;
-    width: 17rem;
-    height: 3rem;
-    border-radius: 3px;
-    &:hover {
-      background-color: $color-primary-shade;
-      transition: all 1.5;
-    }
-  }
-}
-
-//SHOPPING CART PAGE
-.shopping-cart {
-  margin: 3rem 27rem 0;
-  &-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  &-summary {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2rem;
-    // border: 1px solid $color-black;
-    border-radius: 4px;
-    align-items: left;
-    height: 14rem;
-    width: 20rem;
-    padding: 1rem;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-    &-total {
-      display: flex;
-      justify-content: space-between;
-    }
-    &-line {
-      height: 1px;
-      background-color: $color-black;
-    }
-  }
-  &-payment-button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    width: 15rem;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    border-radius: 5px;
-    color: $color-black;
-    background-color: $color-primary;
-    border: none;
-    align-self: center;
-    &:hover {
-      background-color: $color-primary-shade;
-    }
-  }
-}
-
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: 2rem;
-  // border: 1px solid rgb(218, 218, 218);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  width: 35rem;
-  &-left {
-    display: flex;
-    align-items: center;
-  }
-  &-thumb img {
-    width: 10rem;
-    margin-right: 1rem;
-    border-radius: 5px;
-  }
-  &-delete-button {
-    color: $color-black;
-    background-color: $color-white;
-    border: none;
-    &:hover {
-      cursor: pointer;
-      color: red;
-    }
-  }
-}
-
-.swal2-confirm a {
-  color: $color-white;
-  text-decoration: none;
-}
-
 footer {
-  height: 15rem;
+  height: 34vh;
   text-align: center;
   background-color: rgba(235, 235, 235, 0.521);
   display: flex;
-
-  padding: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 3rem auto;
   a {
-    color: rgb(51, 51, 51);
+    color: rgb(24, 24, 24);
     text-decoration: none;
   }
   &-item {
@@ -304,7 +181,19 @@ footer {
   &-item-2 {
     display: flex;
     flex-direction: column;
-    margin: 0 3rem;
+    margin: 0 5rem;
     text-align: left;
+  }
+  &-credit {
+    display: flex;
+    margin: 0.5rem auto;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-right: 0.4rem;
+    }
+    a {
+      color: black;
+    }
   }
 }
