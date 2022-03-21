@@ -10,10 +10,10 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-text">
-        <h1 className="hero-title">Lorem ipsum dolor sit</h1>
+        <h1 className="hero-title">Furniture Kayu Menarik</h1>
         <p className="margin-bottom-3">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ea
-          error magnam doloribus cupiditate laudantium et facilis.
+          Pandekayu woodwork menjediakan produk-produk furniture bergaya modern
+          dan berkualitas dengan harga terjangkau
         </p>
         <Link to="products" className="link">
           <Button

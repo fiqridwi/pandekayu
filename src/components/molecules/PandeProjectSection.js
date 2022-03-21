@@ -12,10 +12,7 @@ const PandeProjectSection = () => {
       <div className="project-text">
         <div className="margin-bottom-3">
           <h2>Wujudkan desain furniture impian</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
-            facere magnam deserunt voluptatibus doloremque sit.
-          </p>
+          <p>Buat furniture dengan desain yang anda ingingkan</p>
         </div>
         <Link to="pande-project" className="link">
           <Button

@@ -9,9 +9,9 @@ const InfoSection = () => {
           <Icon fontSize="large">thumb_up</Icon>
         </div>
         <div className="info-text">
-          <div className="info-title">Good Quality</div>
+          <div className="info-title">Desain Modern</div>
           <div className="info-detail">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Tampilan produk yang modern dengan kualitas yang baik
           </div>
         </div>
       </div>
@@ -20,9 +20,9 @@ const InfoSection = () => {
           <Icon fontSize="large">attach_money</Icon>
         </div>
         <div className="info-text">
-          <div className="info-title">Affordable Price</div>
+          <div className="info-title">Harga Menarik</div>
           <div className="info-detail">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Harga terjangkau dengan diskon gratis ongkir
           </div>
         </div>
       </div>
@@ -31,9 +31,9 @@ const InfoSection = () => {
           <Icon fontSize="large">construction</Icon>
         </div>
         <div className="info-text">
-          <div className="info-title">Customization</div>
+          <div className="info-title">Kustomisasi</div>
           <div className="info-detail">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Pilihan desain tak terbatas pada produk yang tersedia
           </div>
         </div>
       </div>
