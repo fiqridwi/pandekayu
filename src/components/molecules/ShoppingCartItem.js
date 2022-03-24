@@ -30,6 +30,7 @@ const ShoppingCartItem = ({ data }) => {
         </div>
       </div>
       <div className="cart-item-right">
+        <div className="cart-item-right-line"></div>
         <button
           className="cart-item-delete-button"
           onClick={() => handleDelete()}

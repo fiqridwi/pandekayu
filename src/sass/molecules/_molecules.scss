@@ -7,7 +7,7 @@ nav {
   text-align: center;
   align-items: center;
   padding: 0 17rem;
-  font-size: 1.6rem;
+  font-size: $font-large;
   position: sticky;
   overflow: hidden;
   top: 0;
@@ -42,7 +42,7 @@ nav {
       border-radius: 50px;
       height: 2rem;
       width: 2rem;
-      font-size: 1.3rem;
+      font-size: $font-regular;
     }
   }
 
@@ -56,13 +56,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
   margin: 0 $home-horizontal-margin;
   &-title {
-    font-size: 2.9rem;
+    font-size: $heading-2;
+    margin-bottom: 1rem;
   }
   &-text {
     margin-right: 7rem;
+    p {
+      font-size: $font-regular;
+    }
   }
   &-image {
     position: relative;
@@ -106,7 +109,7 @@ nav {
     }
   }
   button {
-    font-size: 1.5rem;
+    font-size: $font-large;
   }
 }
 
@@ -114,15 +117,17 @@ nav {
 .info {
   display: flex;
   margin: 3rem $home-horizontal-margin;
-  font-size: 1.2rem;
+
   &-item {
     display: flex;
     align-items: center;
-    background-color: rgba(235, 235, 235, 0.521);
+    background-color: $color-grey;
     border-radius: 20px;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
+
     &-2 {
-      margin: 0 3rem;
+      margin: 0 2rem;
+      padding: 1rem 1.5rem;
     }
   }
   &-icon {
@@ -130,7 +135,10 @@ nav {
   }
   &-title {
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: $font-large;
+  }
+  &-detail {
+    font-size: $font-regular;
   }
 }
 
@@ -151,12 +159,22 @@ nav {
       margin-right: 3rem;
     }
   }
+  &-text {
+    h2 {
+      font-size: $heading-3;
+    }
+    p {
+      font-size: $font-regular;
+    }
+  }
 }
 
 footer {
   height: 34vh;
+  width: 100vw;
   text-align: center;
-  background-color: rgba(235, 235, 235, 0.521);
+
+  background-color: $color-grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -174,14 +192,23 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: left;
+    font-size: $font-regular;
     &-title {
-      font-size: 1.4rem;
+      font-size: $font-large;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    &-contact {
+      a {
+        margin-left: 0.5rem;
+      }
     }
   }
   &-item-2 {
     display: flex;
     flex-direction: column;
     margin: 0 5rem;
+    font-size: $font-regular;
     text-align: left;
   }
   &-credit {

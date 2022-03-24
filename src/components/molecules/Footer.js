@@ -1,5 +1,6 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { BsShopWindow } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -26,20 +27,36 @@ const Footer = () => {
           <div className="footer-item-title">
             <p>Kontak Kami</p>
           </div>
-          <a
-            href="https://www.instagram.com/pande.kayu/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://tokopedia.link/lXSQdPsCkob"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Tokopedia
-          </a>
+          <div className="footer-item-contact">
+            <FaWhatsapp />
+            <a
+              href="https://web.whatsapp.com/send?phone=6282219917790"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Whatsapp
+            </a>
+          </div>
+          <div className="footer-item-contact">
+            <FaInstagram />
+            <a
+              href="https://www.instagram.com/pande.kayu/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+          </div>
+          <div className="footer-item-contact">
+            <BsShopWindow />
+            <a
+              href="https://tokopedia.link/lXSQdPsCkob"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Tokopedia
+            </a>
+          </div>
         </div>
       </div>
       <div className="footer-credit">

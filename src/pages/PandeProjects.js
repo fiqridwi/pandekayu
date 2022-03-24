@@ -1,5 +1,11 @@
 import React from "react";
-import { FcGallery, FcPlanner, FcPaid, FcInTransit } from "react-icons/fc";
+import {
+  FcGallery,
+  FcPlanner,
+  FcMoneyTransfer,
+  FcShipped,
+  FcDown,
+} from "react-icons/fc";
 
 const PandeProjects = () => {
   return (
@@ -11,35 +17,73 @@ const PandeProjects = () => {
             <FcGallery size="70" />
           </div>
           <div className="pandeprojects-procedure-item-text">
-            Pertama, pilih desain yang Anda mau beserta ukuran dan detail produk
-            lainnya. Tim kami akan menentukan apakah desain yang Anda ajukan
-            dapat diterima atau tidak.
+            <div className="pandeprojects-procedure-item-text-title">
+              <p>Tentukan Desain</p>
+            </div>
+            <div className="pandeprojects-procedure-item-text-content">
+              <p>
+                Pertama, pilih desain yang Anda mau beserta ukuran dan detail
+                produk lainnya. Tim kami akan menentukan apakah desain yang Anda
+                ajukan dapat diterima atau tidak.
+              </p>
+            </div>
           </div>
+        </div>
+        <div className="pandeprojects-procedure-arrow">
+          <FcDown size="28" />
         </div>
         <div className="pandeprojects-procedure-item">
           <div className="pandeprojects-procedure-item-icon">
             <FcPlanner size="70" />
           </div>
           <div className="pandeprojects-procedure-item-text">
-            Kedua, tim kami akan memberikan info mengenai estimasi durasi
-            pengerjaan serta menyepakati harga bersama.
+            {" "}
+            <div className="pandeprojects-procedure-item-text-title">
+              <p>Kesepakatan</p>
+            </div>
+            <div className="pandeprojects-procedure-item-text-content">
+              <p>
+                Kedua, tim kami akan memberikan info mengenai estimasi durasi
+                pengerjaan serta menyepakati harga bersama.
+              </p>
+            </div>
           </div>
+        </div>
+        <div className="pandeprojects-procedure-arrow">
+          <FcDown size="28" />
         </div>
         <div className="pandeprojects-procedure-item">
           <div className="pandeprojects-procedure-item-icon">
-            <FcPaid size="70" />
+            <FcMoneyTransfer size="70" />
           </div>
           <div className="pandeprojects-procedure-item-text">
-            Ketiga, lakukan pembayarn sesuai kesepakatan untuk <i>pre-order</i>{" "}
-            produk.
+            {" "}
+            <div className="pandeprojects-procedure-item-text-title">
+              <p>Pembayaran</p>
+            </div>
+            <div className="pandeprojects-procedure-item-text-content">
+              <p>
+                Ketiga, lakukan pembayarn sesuai kesepakatan untuk{" "}
+                <i>pre-order</i> produk.
+              </p>
+            </div>
           </div>
+        </div>
+        <div className="pandeprojects-procedure-arrow">
+          <FcDown size="28" />
         </div>
         <div className="pandeprojects-procedure-item">
           <div className="pandeprojects-procedure-item-icon">
-            <FcInTransit size="70" />
+            <FcShipped size="70" />
           </div>
           <div className="pandeprojects-procedure-item-text">
-            Terakhir, produk Anda akan kami kirimkan ke lokasi tujuan.
+            {" "}
+            <div className="pandeprojects-procedure-item-text-title">
+              <p>Pengiriman</p>
+            </div>
+            <div className="pandeprojects-procedure-item-text-content">
+              <p> Terakhir, produk Anda akan kami kirimkan ke lokasi tujuan.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -53,6 +97,7 @@ const PandeProjects = () => {
           >
             di sini
           </a>
+          .
         </p>
       </div>
     </div>

@@ -28,11 +28,11 @@ const ShoppingCart = () => {
 
   return (
     <div className="shopping-cart">
-      <h1 className="margin-bottom-3">Keranjang</h1>
+      <h1 className="page-title">Keranjang</h1>
       <div className="shopping-cart-container">
-        <div className="cart-list">
+        <div>
           {products.products.length < 1 ? (
-            <p>Keranjang belanja Anda kosong</p>
+            <p className="shopping-cart-none">Keranjang belanja Anda kosong</p>
           ) : (
             products.products.map((data, i) => {
               return <ShoppingCartItem data={data} key={i} />;

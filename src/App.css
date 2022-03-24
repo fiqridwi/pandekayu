@@ -54,7 +54,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
-  line-height: 1.7;
+  line-height: 1.4;
 }
 
 .link {
@@ -69,7 +69,7 @@ nav {
   text-align: center;
   align-items: center;
   padding: 0 17rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   position: sticky;
   overflow: hidden;
   top: 0;
@@ -102,7 +102,7 @@ nav {
   border-radius: 50px;
   height: 2rem;
   width: 2rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .nav-cart a {
   color: #000000;
@@ -112,14 +112,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
   margin: 0 25rem;
 }
 .hero-title {
-  font-size: 2.9rem;
+  font-size: 2.93rem;
+  margin-bottom: 1rem;
 }
 .hero-text {
   margin-right: 7rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
 }
 .hero-image {
   position: relative;
@@ -169,24 +172,27 @@ nav {
 .info {
   display: flex;
   margin: 3rem 25rem;
-  font-size: 1.2rem;
 }
 .info-item {
   display: flex;
   align-items: center;
-  background-color: rgba(235, 235, 235, 0.521);
+  background-color: #ecf0f1;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 .info-item-2 {
-  margin: 0 3rem;
+  margin: 0 2rem;
+  padding: 1rem 1.5rem;
 }
 .info-icon {
   padding: 1rem;
 }
 .info-title {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+}
+.info-detail {
+  font-size: 1.2rem;
 }
 
 .project {
@@ -204,11 +210,18 @@ nav {
   border-radius: 10px;
   margin-right: 3rem;
 }
+.project-text h2 {
+  font-size: 2.34rem;
+}
+.project-text p {
+  font-size: 1.2rem;
+}
 
 footer {
   height: 34vh;
+  width: 100vw;
   text-align: center;
-  background-color: rgba(235, 235, 235, 0.521);
+  background-color: #ecf0f1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -227,14 +240,21 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: left;
+  font-size: 1.2rem;
 }
 .footer-item-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer-item-contact a {
+  margin-left: 0.5rem;
 }
 .footer-item-2 {
   display: flex;
   flex-direction: column;
   margin: 0 5rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 .footer-credit {
@@ -252,6 +272,7 @@ footer {
 
 .page-title {
   margin: 0 0 3rem 7rem;
+  font-size: 2.34rem;
 }
 
 .products {
@@ -291,12 +312,20 @@ footer {
   background-color: #e0b720;
   transition: all 1.5;
 }
+.product-item-text h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+.product-item-text p {
+  font-size: 1rem;
+}
 
 .shopping-cart {
-  margin: 3rem 27rem 10rem;
+  margin: 3rem 15rem;
   font-size: 1.2rem;
 }
 .shopping-cart-container {
+  margin: 3rem 7rem 10rem;
   display: flex;
   justify-content: space-between;
 }
@@ -310,7 +339,7 @@ footer {
   height: 18rem;
   width: 23rem;
   padding: 2rem;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.267);
 }
 .shopping-cart-summary-total {
   display: flex;
@@ -347,13 +376,29 @@ footer {
   align-items: center;
   margin-bottom: 1rem;
   padding: 2rem 3rem;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.267);
   border-radius: 5px;
   width: 40rem;
+}
+.cart-item-detail h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.cart-item-detail p {
+  font-size: 1rem;
 }
 .cart-item-left {
   display: flex;
   align-items: center;
+}
+.cart-item-right {
+  display: flex;
+}
+.cart-item-right-line {
+  height: 7rem;
+  width: 1px;
+  background-color: #888888;
+  margin-right: 2rem;
 }
 .cart-item-thumb img {
   width: 10rem;
@@ -361,13 +406,13 @@ footer {
   border-radius: 5px;
 }
 .cart-item-delete-button {
-  color: red;
+  color: #c0392b;
   background-color: #ffffff;
   border: none;
 }
 .cart-item-delete-button:hover {
   cursor: pointer;
-  color: #b90000;
+  color: #973227;
 }
 
 .swal2-confirm a {
@@ -379,21 +424,34 @@ footer {
   margin: 3rem 15rem 0;
 }
 .pandeprojects-procedure {
-  font-size: 1.4rem;
   padding: 0 7rem;
 }
 .pandeprojects-procedure-item {
   display: flex;
   align-items: center;
+  background-color: #ecf0f1;
+  padding: 2rem 3rem;
+  border-radius: 10px;
 }
 .pandeprojects-procedure-item-icon {
   margin-right: 2rem;
+}
+.pandeprojects-procedure-item-text-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.pandeprojects-procedure-item-text-content {
+  font-size: 1.2rem;
+}
+.pandeprojects-procedure-arrow {
+  text-align: center;
+  margin: 1rem 0;
 }
 .pandeprojects-contact {
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 6rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=App.css.map */

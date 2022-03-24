@@ -1,6 +1,6 @@
 import React from "react";
 import { addItem, addProduct } from "../../actions";
-import Icon from "@mui/material/Icon";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Swal from "sweetalert2";
 
 import { useDispatch } from "react-redux";
@@ -38,7 +38,7 @@ const ProductItem = ({ name, price, id }) => {
         </div>
       </div>
       <button onClick={() => handleAddItem()} className="product-item-button">
-        <Icon>add_shopping_cart</Icon>
+        <MdOutlineAddShoppingCart />
       </button>
     </div>
   );
