@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="hero-title">Furniture Kayu Menarik</h1>
         <p className="margin-bottom-3">
           Pandekayu woodwork menyediakan produk-produk furniture bergaya modern
-          dan berkualitas dengan harga terjangkau.
+          dan berkualitas namun dengan harga terjangkau.
         </p>
         <Link to="products" className="link">
           <Button
