@@ -2,11 +2,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  height: 6.4rem;
+  height: 5rem;
   width: 100%;
   text-align: center;
   align-items: center;
-  padding: 0 17rem;
+  padding: 0 13rem;
   font-size: $font-large;
   position: sticky;
   overflow: hidden;
@@ -18,36 +18,56 @@ nav {
 }
 
 .nav {
-  &-menu a {
-    text-decoration: none;
-    color: $color-black;
-  }
-  &-menu-item {
-    padding: 1rem;
-    border-radius: 5px;
-    &:hover {
-      background-color: $color-primary;
+  &-menu {
+    @include res(tab-port) {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: $color-black;
+      padding: 1rem;
+    }
+    &-item {
+      border-radius: 8px;
+
+      &:hover {
+        background-color: $color-primary;
+      }
     }
   }
 
   &-logo img {
-    width: 4rem;
+    width: 2.8rem;
   }
 
   &-cart {
     display: flex;
+    position: relative;
+    justify-content: center;
     color: $color-black;
+    padding: 1rem;
     &-value {
+      position: absolute;
+      right: -3px;
       background-color: $color-primary;
       border-radius: 50px;
       height: 2rem;
       width: 2rem;
       font-size: $font-regular;
     }
+    a {
+      color: $color-black;
+    }
   }
 
-  &-cart a {
-    color: $color-black;
+  &-burger {
+    display: none;
+    margin-right: 1rem;
+    align-self: center;
+    cursor: pointer;
+    @include res(tab-port) {
+      display: block;
+    }
   }
 }
 
@@ -57,6 +77,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 $home-horizontal-margin;
+  @include res(tab-port) {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+  }
   &-title {
     font-size: $heading-2;
     margin-bottom: 1rem;
@@ -65,6 +90,15 @@ nav {
     margin-right: 7rem;
     p {
       font-size: $font-regular;
+    }
+    @include res(tab-port) {
+      margin: 0 auto;
+    }
+  }
+  &-button {
+    @include res(tab-port) {
+      display: flex;
+      justify-content: center;
     }
   }
   &-image {
@@ -117,21 +151,24 @@ nav {
 .info {
   display: flex;
   margin: 3rem $home-horizontal-margin;
-
+  @include res(tab-port) {
+    flex-direction: column;
+  }
   &-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     background-color: $color-grey;
     border-radius: 20px;
-    padding: 1rem 1.5rem;
-
-    &-2 {
-      margin: 0 2rem;
-      padding: 1rem 1.5rem;
+    margin: 1rem;
+    padding: 1rem 1.7rem;
+    @include res(tab-port) {
+      padding: 2rem 1rem;
     }
   }
   &-icon {
-    padding: 1rem;
+    color: $color-black;
   }
   &-title {
     font-weight: 700;
@@ -147,24 +184,53 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem $home-horizontal-margin;
+  margin: 2rem $home-horizontal-margin 5rem;
   padding: 3rem;
   background-color: $color-primary;
-  height: 20rem;
+  height: 23rem;
   border-radius: 10px;
+  @media (max-width: 1160px) {
+    flex-direction: column;
+    text-align: center;
+    height: 40rem;
+  }
+  @include res(tab-port) {
+    flex-direction: column;
+    text-align: center;
+    height: 35rem;
+    margin: 2rem 17rem 5rem;
+  }
   &-image {
     img {
-      width: 20rem;
+      height: 15rem;
       border-radius: 10px;
-      margin-right: 3rem;
     }
   }
   &-text {
+    margin-left: 3rem;
     h2 {
       font-size: $heading-3;
+      @include res(tab-land) {
+        font-size: $heading-4;
+      }
     }
+
     p {
       font-size: $font-regular;
+    }
+    @include res(tab-port) {
+      margin-top: 1rem;
+    }
+  }
+  &-button {
+    margin-top: 2rem;
+    @include res(tab-port) {
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 1160px) {
+      display: flex;
+      justify-content: center;
     }
   }
 }

@@ -15,7 +15,7 @@ const InfoSection = () => {
           </div>
         </div>
       </div>
-      <div className="info-item info-item-2">
+      <div className="info-item ">
         <div className="info-icon">
           <Icon fontSize="large">attach_money</Icon>
         </div>
@@ -28,7 +28,7 @@ const InfoSection = () => {
       </div>
       <div className="info-item">
         <div className="info-icon">
-          <Icon fontSize="large">construction</Icon>
+          <Icon fontSize="3">construction</Icon>
         </div>
         <div className="info-text">
           <div className="info-title">Kustomisasi</div>

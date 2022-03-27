@@ -1,6 +1,7 @@
 import React from "react";
 import Icon from "@mui/material/Icon";
 import { Link } from "react-router-dom";
+import { HiMenu } from "react-icons/hi";
 import pandekayuLogo from "../../images/icons/pandekayu-icon.png";
 import { useSelector } from "react-redux";
 
@@ -25,11 +26,14 @@ const Navbar = () => {
           PandeProjects
         </Link>
       </div>
+
       <div className="nav-cart">
+        <div className="nav-burger">
+          <HiMenu fontSize="28" />
+        </div>
         <Link to="/cart">
           <Icon fontSize="large">shopping_bag</Icon>
         </Link>
-
         <p className="nav-cart-value">{item}</p>
       </div>
     </nav>

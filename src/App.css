@@ -3,9 +3,22 @@
 }
 
 .margin-menu-nav {
-  margin: 0 3rem;
+  margin: 0 2rem;
 }
 
+/*
+0-600px     : Phone 
+600-900     : Tablet Portrait
+900-1200    : Tablet Landscape
+1200-1800   : Desktop (normal size)
+1800 ++     : Large Screen 
+*/
+/*
+- phone
+- tab-port
+- tab-land
+- big-screen
+*/
 .button {
   display: flex;
   align-items: center;
@@ -47,6 +60,21 @@ html {
   font-size: 62.5%;
   /* 1 rem = 10px; 10px/16px = 62.5% */
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -64,11 +92,11 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  height: 6.4rem;
+  height: 5rem;
   width: 100%;
   text-align: center;
   align-items: center;
-  padding: 0 17rem;
+  padding: 0 13rem;
   font-size: 1.5rem;
   position: sticky;
   overflow: hidden;
@@ -79,25 +107,35 @@ nav {
   z-index: 100;
 }
 
+@media (max-width: 56.25em) {
+  .nav-menu {
+    display: none;
+  }
+}
 .nav-menu a {
   text-decoration: none;
   color: #000000;
+  padding: 1rem;
 }
 .nav-menu-item {
-  padding: 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .nav-menu-item:hover {
   background-color: #f9ca24;
 }
 .nav-logo img {
-  width: 4rem;
+  width: 2.8rem;
 }
 .nav-cart {
   display: flex;
+  position: relative;
+  justify-content: center;
   color: #000000;
+  padding: 1rem;
 }
 .nav-cart-value {
+  position: absolute;
+  right: -3px;
   background-color: #f9ca24;
   border-radius: 50px;
   height: 2rem;
@@ -107,12 +145,30 @@ nav {
 .nav-cart a {
   color: #000000;
 }
+.nav-burger {
+  display: none;
+  margin-right: 1rem;
+  align-self: center;
+  cursor: pointer;
+}
+@media (max-width: 56.25em) {
+  .nav-burger {
+    display: block;
+  }
+}
 
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 25rem;
+}
+@media (max-width: 56.25em) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+  }
 }
 .hero-title {
   font-size: 2.93rem;
@@ -123,6 +179,17 @@ nav {
 }
 .hero-text p {
   font-size: 1.2rem;
+}
+@media (max-width: 56.25em) {
+  .hero-text {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 56.25em) {
+  .hero-button {
+    display: flex;
+    justify-content: center;
+  }
 }
 .hero-image {
   position: relative;
@@ -173,19 +240,28 @@ nav {
   display: flex;
   margin: 3rem 25rem;
 }
+@media (max-width: 56.25em) {
+  .info {
+    flex-direction: column;
+  }
+}
 .info-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   background-color: #ecf0f1;
   border-radius: 20px;
-  padding: 1rem 1.5rem;
+  margin: 1rem;
+  padding: 1rem 1.7rem;
 }
-.info-item-2 {
-  margin: 0 2rem;
-  padding: 1rem 1.5rem;
+@media (max-width: 56.25em) {
+  .info-item {
+    padding: 2rem 1rem;
+  }
 }
 .info-icon {
-  padding: 1rem;
+  color: #000000;
 }
 .info-title {
   font-weight: 700;
@@ -199,22 +275,64 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 25rem;
+  margin: 2rem 25rem 5rem;
   padding: 3rem;
   background-color: #f9ca24;
-  height: 20rem;
+  height: 23rem;
   border-radius: 10px;
 }
+@media (max-width: 1160px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+    height: 40rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+    height: 35rem;
+    margin: 2rem 17rem 5rem;
+  }
+}
 .project-image img {
-  width: 20rem;
+  height: 15rem;
   border-radius: 10px;
-  margin-right: 3rem;
+}
+.project-text {
+  margin-left: 3rem;
 }
 .project-text h2 {
   font-size: 2.34rem;
 }
+@media (max-width: 75em) {
+  .project-text h2 {
+    font-size: 1.87rem;
+  }
+}
 .project-text p {
   font-size: 1.2rem;
+}
+@media (max-width: 56.25em) {
+  .project-text {
+    margin-top: 1rem;
+  }
+}
+.project-button {
+  margin-top: 2rem;
+}
+@media (max-width: 56.25em) {
+  .project-button {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1160px) {
+  .project-button {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 footer {
