@@ -1,6 +1,11 @@
 .page-title {
   margin: 0 0 3rem 7rem;
   font-size: $heading-3;
+
+  @include res(tab-port) {
+    text-align: center;
+    margin: 3rem auto;
+  }
 }
 
 // PRODUCTS PAGE
@@ -8,8 +13,19 @@
   margin: 3rem 15rem;
   &-list {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  @include res(tab-land) {
+    margin: 3rem 10rem;
+  }
+  @include res(tab-port) {
+    margin: 3rem 8rem;
+  }
+
+  @media (max-width: 705px) {
+    margin: 3rem 3rem;
   }
 }
 
@@ -59,6 +75,20 @@
     margin: 3rem 7rem 10rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 1060px) {
+      justify-content: center;
+    }
+    @include res(tab-port) {
+      margin: 3rem 5rem 10rem;
+    }
+    @include res(phone) {
+      margin: 3rem 1rem 10rem;
+    }
+  }
+
+  @include res(phone) {
+    margin: 3rem 3rem;
   }
   &-summary {
     display: flex;
@@ -70,7 +100,7 @@
     height: 18rem;
     width: 23rem;
     padding: 2rem;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.267);
+    border: 1px solid rgb(218, 218, 218);
     &-total {
       display: flex;
       justify-content: space-between;
@@ -78,6 +108,9 @@
     &-line {
       height: 1px;
       background-color: $color-black;
+    }
+    @media (max-width: 1056px) {
+      margin: 4rem auto;
     }
   }
   &-payment-button {

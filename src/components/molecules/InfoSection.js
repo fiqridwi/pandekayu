@@ -1,12 +1,13 @@
 import React from "react";
 import Icon from "@mui/material/Icon";
+import { FaThumbsUp, FaTags, FaWrench } from "react-icons/fa";
 
 const InfoSection = () => {
   return (
     <div className="info">
       <div className="info-item">
         <div className="info-icon">
-          <Icon fontSize="large">thumb_up</Icon>
+          <FaThumbsUp size="28" />
         </div>
         <div className="info-text">
           <div className="info-title">Desain Modern</div>
@@ -17,7 +18,7 @@ const InfoSection = () => {
       </div>
       <div className="info-item ">
         <div className="info-icon">
-          <Icon fontSize="large">attach_money</Icon>
+          <FaTags size="28" />
         </div>
         <div className="info-text">
           <div className="info-title">Harga Menarik</div>
@@ -28,7 +29,7 @@ const InfoSection = () => {
       </div>
       <div className="info-item">
         <div className="info-icon">
-          <Icon fontSize="3">construction</Icon>
+          <FaWrench size="28" />
         </div>
         <div className="info-text">
           <div className="info-title">Kustomisasi</div>

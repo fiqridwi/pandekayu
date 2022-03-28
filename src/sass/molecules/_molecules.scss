@@ -9,15 +9,21 @@ nav {
   padding: 0 13rem;
   font-size: $font-large;
   position: sticky;
-  overflow: hidden;
   top: 0;
   background-color: $color-white;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
   z-index: 100;
+  @include res(tab-port) {
+    padding: 0 8rem;
+  }
+  @include res(phone) {
+    padding: 0 5rem;
+  }
 }
 
 .nav {
+  position: relative;
   &-menu {
     @include res(tab-port) {
       display: none;
@@ -68,6 +74,32 @@ nav {
     @include res(tab-port) {
       display: block;
     }
+    &-menu {
+      display: none;
+      position: absolute;
+      top: 10;
+      right: 80px;
+      height: 120px;
+      width: 150px;
+      background-color: $color-white;
+      padding: 1rem;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.295);
+      font-size: $font-regular;
+      z-index: 120;
+      border-radius: 8px;
+      a {
+        text-decoration: none;
+        margin: 0.25rem;
+      }
+
+      &-active {
+        display: flex;
+        flex-direction: column;
+        &-close {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -77,10 +109,16 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 $home-horizontal-margin;
+  @include res(tab-land) {
+    margin: 0 18rem;
+  }
   @include res(tab-port) {
     flex-direction: column-reverse;
     text-align: center;
     justify-content: center;
+  }
+  @include res(phone) {
+    margin: 0 8rem;
   }
   &-title {
     font-size: $heading-2;
@@ -150,9 +188,17 @@ nav {
 // INFO SECTION HOME
 .info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin: 3rem $home-horizontal-margin;
+
   @include res(tab-port) {
     flex-direction: column;
+    margin: 3rem 18rem;
+  }
+  @include res(phone) {
+    margin: 3rem 8rem;
   }
   &-item {
     display: flex;
@@ -160,15 +206,17 @@ nav {
     align-items: center;
     text-align: center;
     background-color: $color-grey;
+    width: 18rem;
     border-radius: 20px;
     margin: 1rem;
-    padding: 1rem 1.7rem;
+    padding: 2rem 1.7rem;
     @include res(tab-port) {
       padding: 2rem 1rem;
     }
   }
   &-icon {
     color: $color-black;
+    margin-bottom: 1rem;
   }
   &-title {
     font-weight: 700;
@@ -194,12 +242,21 @@ nav {
     text-align: center;
     height: 40rem;
   }
+
   @include res(tab-port) {
     flex-direction: column;
     text-align: center;
+
     height: 35rem;
     margin: 2rem 17rem 5rem;
   }
+  @media (max-width: 750px) {
+    margin: 2rem 12rem 5rem;
+  }
+  @include res(phone) {
+    margin: 3rem 8rem;
+  }
+
   &-image {
     img {
       height: 15rem;
@@ -208,13 +265,17 @@ nav {
   }
   &-text {
     margin-left: 3rem;
+
     h2 {
       font-size: $heading-3;
       @include res(tab-land) {
         font-size: $heading-4;
       }
     }
-
+    @media (max-width: 1160px) {
+      margin-left: 0rem;
+      margin-top: 2rem;
+    }
     p {
       font-size: $font-regular;
     }
@@ -236,7 +297,7 @@ nav {
 }
 
 footer {
-  height: 34vh;
+  height: 20rem;
   width: 100vw;
   text-align: center;
 
@@ -244,12 +305,22 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include res(phone) {
+    height: 36rem;
+  }
 }
 
 .footer {
   display: flex;
   flex-direction: row;
   margin: 3rem auto;
+  @include res(phone) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   a {
     color: rgb(24, 24, 24);
     text-decoration: none;
@@ -276,6 +347,9 @@ footer {
     margin: 0 5rem;
     font-size: $font-regular;
     text-align: left;
+    @include res(phone) {
+      margin: 2rem 0;
+    }
   }
   &-credit {
     display: flex;

@@ -14,7 +14,7 @@ const PandeProjectSection = () => {
           <h2>Wujudkan desain furniture impian</h2>
           <p>Buat furniture dengan desain yang Anda ingingkan</p>
         </div>
-        <Link to="pande-project" className="link">
+        <Link to="pande-projects" className="link">
           <div className="project-button">
             <Button
               title="Buat Sekarang"
