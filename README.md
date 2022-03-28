@@ -38,6 +38,6 @@ Live :
 
 ## Screenshoots
 
-(https://github.com/fiqridwi/pandekayu/blob/main/screenshots/home.png)
-(https://github.com/fiqridwi/pandekayu/blob/main/screenshots/products.png)
-(https://github.com/fiqridwi/pandekayu/blob/main/screenshots/cart.png)
+![Home](https://github.com/fiqridwi/pandekayu/blob/main/screenshots/home.png)
+![Products](https://github.com/fiqridwi/pandekayu/blob/main/screenshots/products.png)
+![Shopping Cart](https://github.com/fiqridwi/pandekayu/blob/main/screenshots/cart.png)
