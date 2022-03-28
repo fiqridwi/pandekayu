@@ -2,7 +2,7 @@
 
 A website to shop Pandekayu's product. Pandekayu is a woodworks seller that sell some furniture and camping tools.
 
-Live :
+Live : https://pandekayu.netlify.app/
 
 ## Features
 
