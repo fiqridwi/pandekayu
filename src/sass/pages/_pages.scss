@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
   @include res(tab-land) {
     margin: 3rem 10rem;
   }
@@ -26,6 +27,9 @@
 
   @media (max-width: 705px) {
     margin: 3rem 3rem;
+  }
+  @include res(phone-small) {
+    margin: 3rem 0.4rem;
   }
 }
 
@@ -40,9 +44,25 @@
   padding: 1rem;
   border: 1px solid rgb(218, 218, 218);
   border-radius: 5px;
+  @include res(phone) {
+    max-width: 17rem;
+    height: 25rem;
+  }
+  @include res(phone-small) {
+    width: 13rem;
+    min-height: 15rem;
+
+    margin: 0.25rem;
+  }
   &-thumbnail {
     width: 17rem;
     border-radius: 5px;
+    @include res(phone) {
+      width: 14rem;
+    }
+    @include res(phone-small) {
+      width: 12rem;
+    }
   }
   &-button {
     background-color: $color-primary;
@@ -51,6 +71,12 @@
     width: 17rem;
     height: 3rem;
     border-radius: 3px;
+    @include res(phone) {
+      width: 14rem;
+    }
+    @include res(phone-small) {
+      width: 12rem;
+    }
     &:hover {
       background-color: $color-primary-shade;
       transition: all 1.5;
@@ -144,6 +170,14 @@
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.267);
   border-radius: 5px;
   width: 40rem;
+  @include res(phone) {
+    width: 30rem;
+    padding: 1rem;
+  }
+  @include res(phone-small) {
+    width: 25rem;
+    padding: 1rem;
+  }
   &-detail {
     h3 {
       font-size: $font-regular;
@@ -190,8 +224,23 @@
 //PANDEPROJECTS PAGE
 .pandeprojects {
   margin: 3rem 15rem 0;
+  @include res(tab-port) {
+    margin: 3rem 7rem;
+  }
+  @include res(phone) {
+    margin: 3rem 2rem;
+  }
+  @include res(phone-small) {
+    margin: 3rem 1rem;
+  }
   &-procedure {
     padding: 0 7rem;
+    @include res(phone) {
+      margin: 0 1rem;
+    }
+    @include res(phone-small) {
+      padding: 0 2rem;
+    }
     &-item {
       display: flex;
       align-items: center;
@@ -209,6 +258,10 @@
         &-content {
           font-size: $font-regular;
         }
+      }
+      @include res(phone) {
+        text-align: center;
+        flex-direction: column;
       }
     }
     &-arrow {

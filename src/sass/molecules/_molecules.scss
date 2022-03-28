@@ -20,6 +20,9 @@ nav {
   @include res(phone) {
     padding: 0 5rem;
   }
+  @include res(phone-small) {
+    padding: 0 3rem;
+  }
 }
 
 .nav {
@@ -120,6 +123,9 @@ nav {
   @include res(phone) {
     margin: 0 8rem;
   }
+  @include res(phone-small) {
+    margin: 0 3rem;
+  }
   &-title {
     font-size: $heading-2;
     margin-bottom: 1rem;
@@ -191,14 +197,20 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 3rem $home-horizontal-margin;
+  margin: 3rem 20rem;
 
+  @include res(tab-land) {
+    margin: 3rem 18rem;
+  }
   @include res(tab-port) {
     flex-direction: column;
     margin: 3rem 18rem;
   }
   @include res(phone) {
     margin: 3rem 8rem;
+  }
+  @include res(phone-small) {
+    margin: 3rem 2rem;
   }
   &-item {
     display: flex;
@@ -256,7 +268,9 @@ nav {
   @include res(phone) {
     margin: 3rem 8rem;
   }
-
+  @include res(phone-small) {
+    margin: 3rem 3rem;
+  }
   &-image {
     img {
       height: 15rem;
@@ -306,19 +320,23 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   @include res(phone) {
-    height: 36rem;
+    height: 43rem;
   }
 }
 
 .footer {
   display: flex;
+  position: relative;
   flex-direction: row;
   margin: 3rem auto;
+  text-align: center;
+  align-items: center;
   @include res(phone) {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: start;
+    align-items: baseline;
+    text-align: left;
+    margin: 3rem 15rem 3rem 3rem;
   }
 
   a {
