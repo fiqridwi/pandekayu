@@ -23,6 +23,9 @@ const ProductItem = ({ name, price, id }) => {
       timer: 1000,
     });
   };
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
 
   return (
     <div className="product-item">
@@ -34,7 +37,7 @@ const ProductItem = ({ name, price, id }) => {
         />
         <div className="product-item-text">
           <h3>{name}</h3>
-          <p>{`Rp. ${price}`}</p>{" "}
+          <p>{`Rp ${numberWithCommas(price)}`}</p>{" "}
         </div>
       </div>
       <button onClick={() => handleAddItem()} className="product-item-button">
