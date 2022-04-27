@@ -1,14 +1,16 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProductItem from "../components/molecules/ProductItem";
 import { fetchProductData } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 import loadingGIF from "../images/icons/loading.gif";
+import Modal from "../components/atoms/Modal";
 
 const Products = () => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.productReducer);
 
+  const [selectImage, setSelectImage] = useState(null);
   useEffect(() => {
     dispatch(fetchProductData());
   }, [dispatch]);
@@ -27,11 +29,15 @@ const Products = () => {
                 name={item.name}
                 price={item.price}
                 id={item.id}
+                setSelectImage={setSelectImage}
               />
             );
           })
         )}
       </div>
+      {selectImage && (
+        <Modal setSelectImage={setSelectImage} selectImage={selectImage} />
+      )}
     </div>
   );
 };

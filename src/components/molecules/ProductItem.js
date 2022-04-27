@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 import { useDispatch } from "react-redux";
 
-const ProductItem = ({ name, price, id }) => {
+const ProductItem = ({ name, price, id, setSelectImage }) => {
   const dispatch = useDispatch();
   const handleAddItem = () => {
     const newProduct = {
@@ -29,7 +29,7 @@ const ProductItem = ({ name, price, id }) => {
 
   return (
     <div className="product-item">
-      <div>
+      <div onClick={() => setSelectImage(id)}>
         <img
           className="product-item-thumbnail"
           src={require(`../../images/products/${id}.jpg`)}

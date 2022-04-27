@@ -55,6 +55,7 @@
     margin: 0.25rem;
   }
   &-thumbnail {
+    cursor: pointer;
     width: 17rem;
     border-radius: 5px;
     @include res(phone) {
