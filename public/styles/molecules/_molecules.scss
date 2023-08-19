@@ -1,0 +1,384 @@
+// NAVBAR
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 0 13rem;
+  font-size: $font-large;
+  position: sticky;
+  top: 0;
+  background-color: $color-white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  z-index: 100;
+  @include res(tab-port) {
+    padding: 0 8rem;
+  }
+  @include res(phone) {
+    padding: 0 5rem;
+  }
+  @include res(phone-small) {
+    padding: 0 3rem;
+  }
+}
+
+.nav {
+  position: relative;
+  &-menu {
+    @include res(tab-port) {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      color: $color-black;
+      padding: 1rem;
+    }
+    &-item {
+      border-radius: 8px;
+
+      &:hover {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &-logo img {
+    width: 2.8rem;
+  }
+
+  &-cart {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    color: $color-black;
+    padding: 1rem;
+    &-value {
+      position: absolute;
+      right: -3px;
+      background-color: $color-primary;
+      border-radius: 50px;
+      height: 2rem;
+      width: 2rem;
+      font-size: $font-regular;
+    }
+    a {
+      color: $color-black;
+    }
+  }
+
+  &-burger {
+    display: none;
+    margin-right: 1rem;
+    align-self: center;
+    cursor: pointer;
+    @include res(tab-port) {
+      display: block;
+    }
+    &-menu {
+      display: none;
+      position: absolute;
+      top: 10;
+      right: 80px;
+      height: 120px;
+      width: 150px;
+      background-color: $color-white;
+      padding: 1rem;
+      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.295);
+      font-size: $font-regular;
+      z-index: 120;
+      border-radius: 8px;
+      a {
+        text-decoration: none;
+        margin: 0.25rem;
+      }
+
+      &-active {
+        display: flex;
+        flex-direction: column;
+        &-close {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// HERO
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 $home-horizontal-margin;
+  @include res(tab-land) {
+    margin: 0 18rem;
+  }
+  @include res(tab-port) {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+  }
+  @include res(phone) {
+    margin: 0 8rem;
+  }
+  @include res(phone-small) {
+    margin: 0 3rem;
+  }
+  &-title {
+    font-size: $heading-2;
+    margin-bottom: 1rem;
+  }
+  &-text {
+    margin-right: 7rem;
+    p {
+      font-size: $font-regular;
+    }
+    @include res(tab-port) {
+      margin: 0 auto;
+    }
+  }
+  &-button {
+    @include res(tab-port) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &-image {
+    position: relative;
+    &-1 img {
+      width: 25rem;
+      border-radius: 50%;
+      &:hover {
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 20px;
+        transform: translateY(-2px);
+        transition: all 0.2s;
+      }
+    }
+    &-2 img {
+      width: 10rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 3rem;
+      right: 18rem;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 20px;
+      &:hover {
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 30px;
+        transform: translateY(-2px);
+        transition: all 0.2s;
+      }
+    }
+    &-3 img {
+      width: 12rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 13rem;
+      right: -2rem;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 20px;
+      &:hover {
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 30px;
+        transform: translateY(-2px);
+        transition: all 0.2s;
+      }
+    }
+  }
+  button {
+    font-size: $font-large;
+  }
+}
+
+// INFO SECTION HOME
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 20rem;
+
+  @include res(tab-land) {
+    margin: 3rem 18rem;
+  }
+  @include res(tab-port) {
+    flex-direction: column;
+    margin: 3rem 18rem;
+  }
+  @include res(phone) {
+    margin: 3rem 8rem;
+  }
+  @include res(phone-small) {
+    margin: 3rem 2rem;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $color-grey;
+    width: 18rem;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 2rem 1.7rem;
+    @include res(tab-port) {
+      padding: 2rem 1rem;
+    }
+  }
+  &-icon {
+    color: $color-black;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    font-weight: 700;
+    font-size: $font-large;
+  }
+  &-detail {
+    font-size: $font-regular;
+  }
+}
+
+// PROJECT SECTION HOME
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem $home-horizontal-margin 5rem;
+  padding: 3rem;
+  background-color: $color-primary;
+  height: 23rem;
+  border-radius: 10px;
+  @media (max-width: 1160px) {
+    flex-direction: column;
+    text-align: center;
+    height: 40rem;
+  }
+
+  @include res(tab-port) {
+    flex-direction: column;
+    text-align: center;
+
+    height: 35rem;
+    margin: 2rem 17rem 5rem;
+  }
+  @media (max-width: 750px) {
+    margin: 2rem 12rem 5rem;
+  }
+  @include res(phone) {
+    margin: 3rem 8rem;
+  }
+  @include res(phone-small) {
+    margin: 3rem 3rem;
+  }
+  &-image {
+    img {
+      height: 15rem;
+      border-radius: 10px;
+    }
+  }
+  &-text {
+    margin-left: 3rem;
+
+    h2 {
+      font-size: $heading-3;
+      @include res(tab-land) {
+        font-size: $heading-4;
+      }
+    }
+    @media (max-width: 1160px) {
+      margin-left: 0rem;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: $font-regular;
+    }
+    @include res(tab-port) {
+      margin-top: 1rem;
+    }
+  }
+  &-button {
+    margin-top: 2rem;
+    @include res(tab-port) {
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 1160px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+footer {
+  height: 20rem;
+  width: 100vw;
+  text-align: center;
+
+  background-color: $color-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include res(phone) {
+    height: 43rem;
+  }
+}
+
+.footer {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin: 3rem auto;
+  text-align: center;
+  align-items: center;
+  @include res(phone) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+    text-align: left;
+    margin: 3rem 15rem 3rem 3rem;
+  }
+
+  a {
+    color: rgb(24, 24, 24);
+    text-decoration: none;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: $font-regular;
+    &-title {
+      font-size: $font-large;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    &-contact {
+      a {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  &-item-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem;
+    font-size: $font-regular;
+    text-align: left;
+    @include res(phone) {
+      margin: 2rem 0;
+    }
+  }
+  &-credit {
+    display: flex;
+    margin: 0.5rem auto;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin-right: 0.4rem;
+    }
+    a {
+      color: black;
+    }
+  }
+}
