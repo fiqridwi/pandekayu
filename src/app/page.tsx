@@ -1,16 +1,19 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import Hero from "./dashboard/components/Hero";
-import Navbar from "./dashboard/components/Navbar";
+import Hero from "./components/home/Hero";
+import Navbar from "./components/home/Navbar";
+import InfoSection from "./components/home/InfoSection";
+import PandeProjectSection from "./components/home/PandeProjectSection";
+import Footer from "./components/home/Footer";
+import RootLayout from "./layout";
 
 // import { main.scss } from 'public/styles';
 export default function Home() {
 	return (
-		<main>
-			<Navbar />
+		<RootLayout>
+			{/* <Navbar /> */}
 			<Hero />
-		</main>
+			<InfoSection />
+			<PandeProjectSection />
+			{/* <Footer /> */}
+		</RootLayout>
 	);
 }

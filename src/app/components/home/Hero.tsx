@@ -4,7 +4,7 @@ import heroImage3 from "@/public/images/products/22.jpg";
 import Image from "next/image";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
-import Button from "../../components/shared/Button";
+import Button from "../shared/Button";
 
 const Hero = () => {
 	return (
