@@ -8,12 +8,12 @@ import RootLayout from "./layout";
 // import { main.scss } from 'public/styles';
 export default function Home() {
 	return (
-		<RootLayout>
+		<main>
 			{/* <Navbar /> */}
 			<Hero />
 			<InfoSection />
 			<PandeProjectSection />
 			{/* <Footer /> */}
-		</RootLayout>
+		</main>
 	);
 }

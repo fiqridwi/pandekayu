@@ -9,15 +9,17 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "PandeKayu",
 	description:
-		"PandeKayu woodworks menyediakan produk-produk furniture bergaya modern dan berkualitas namun dengan harga yang terjangkau.",
+		"Pandekayu woodworks menyediakan produk-produk furniture bergaya modern dan berkualitas namun dengan harga yang terjangkau",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<>
-			<Navbar />
-			<body className={inter.className}>{children}</body>
-			<Footer />
-		</>
+		<html lang="en">
+			<body className={inter.className}>
+				<Navbar />
+				{children}
+				<Footer />
+			</body>
+		</html>
 	);
 }
