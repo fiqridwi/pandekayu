@@ -1,17 +1,31 @@
+"use client";
+import useCart from "../hooks/useCart";
+import ShoppingCartItem from "../components/cart/ShoppingCartItem";
+
 export default function Cart() {
+	const { items } = useCart();
+	console.log(items);
 	return (
 		<div className="shopping-cart">
 			<h1 className="page-title">Keranjang</h1>
 			<div className="shopping-cart-container">
-				{/* <div>
-					{products.products.length < 1 ? (
+				<div>
+					{/* {items.map((data, i) => {
+						return (
+							<div className="shopping-cart-item" key={name}>
+								<li>{data.name}</li>
+							</div>
+						);
+					})} */}
+					{items.length < 1 ? (
 						<p className="shopping-cart-none">Keranjang belanja Anda kosong</p>
 					) : (
-						products.products.map((data, i) => {
+						items.map((data, i) => {
 							return <ShoppingCartItem data={data} key={i} />;
 						})
 					)}
 				</div>
+				{/* 
 				<div className="shopping-cart-summary">
 					<p style={{ marginBottom: "2rem" }}>Ringkasan belanja</p>
 					<p style={{ color: "grey" }}>{`${item} Produk`}</p>

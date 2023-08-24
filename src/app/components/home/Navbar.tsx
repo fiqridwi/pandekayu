@@ -5,10 +5,14 @@ import pandekayuLogo from "public/images/pandekayu-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+
+import useCart from "../../hooks/useCart";
+
 const Navbar = () => {
 	// const item = useSelector((state) => state.itemReducer);
 	const [burgerMenu, setBurgerMenu] = useState("");
 	const [toggle, setToggle] = useState("");
+	const { items } = useCart();
 
 	const handleClick = () => {
 		if (burgerMenu === "") {
@@ -55,7 +59,7 @@ const Navbar = () => {
 				<Link href="/cart">
 					<FontAwesomeIcon icon={faCartShopping} />
 				</Link>
-				{/* <p className="nav-cart-value">{item}</p> */}
+				<p className="nav-cart-value">{items.length}</p>
 			</div>
 		</nav>
 	);

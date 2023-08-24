@@ -1,7 +1,8 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-
+import useCart from "../../hooks/useCart";
 type ProductItemProps = {
 	name: string;
 	price: number;
@@ -9,8 +10,21 @@ type ProductItemProps = {
 };
 
 const ProductItem = ({ name, price, id }: ProductItemProps) => {
+	const { items, addToCart } = useCart();
+
 	function numberWithCommas(x: number) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+	}
+	function handleAdd() {
+		const item = {
+			id: id,
+			name: name,
+			price: price,
+		};
+		addToCart(item);
+		setTimeout(() => {
+			console.log(items);
+		}, 1000);
 	}
 
 	return (
@@ -28,7 +42,7 @@ const ProductItem = ({ name, price, id }: ProductItemProps) => {
 					<p>{`Rp ${numberWithCommas(price)}`}</p>{" "}
 				</div>
 			</div>
-			<button className="product-item-button">
+			<button onClick={handleAdd} className="product-item-button">
 				<FontAwesomeIcon icon={faCartPlus} />
 			</button>
 		</div>

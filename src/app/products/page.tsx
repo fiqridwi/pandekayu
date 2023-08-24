@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default async function Products() {
 	const { products } = await getProducts();
-	console.log(products, "products");
+	// console.log(products, "products");
 
 	return (
 		<div className="products">
