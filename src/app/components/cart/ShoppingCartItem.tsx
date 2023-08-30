@@ -7,19 +7,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
+import useCart from "../../hooks/useCart";
 
-const ShoppingCartItem = ({ data }) => {
-	// const dispatch = useDispatch();
-	// const handleDelete = () => {
-	// 	dispatch(deleteProduct(data.id));
-	// 	dispatch(deleteItem(1));
-	// 	Swal.fire({
-	// 		icon: "info",
-	// 		title: "Produk dihapus dari keranjang",
-	// 		showConfirmButton: false,
-	// 		timer: 1000,
-	// 	});
-	// };
+const ShoppingCartItem = ({ data }: any) => {
+	const { removeProduct } = useCart();
+	const handleDelete = () => {
+		removeProduct(data.id);
+	};
 	return (
 		<div className="cart-item">
 			<div className="cart-item-left">
@@ -38,7 +32,7 @@ const ShoppingCartItem = ({ data }) => {
 			<div className="cart-item-right">
 				<div className="cart-item-right-line"></div>
 				<button className="cart-item-delete-button">
-					<FontAwesomeIcon icon={faTrash} />
+					<FontAwesomeIcon icon={faTrash} size="xl" onClick={handleDelete} />
 				</button>
 			</div>
 		</div>

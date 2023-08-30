@@ -757,9 +757,9 @@ footer {
 }
 .cart-item-right-line {
 	height: 7rem;
-	width: 1px;
-	background-color: #888888;
-	margin-right: 2rem;
+	width: 2px;
+	background-color: #e7e7e7;
+	margin-right: 3rem;
 }
 .cart-item-thumb img {
 	width: auto;

@@ -10,13 +10,6 @@ export default function Cart() {
 			<h1 className="page-title">Keranjang</h1>
 			<div className="shopping-cart-container">
 				<div>
-					{/* {items.map((data, i) => {
-						return (
-							<div className="shopping-cart-item" key={name}>
-								<li>{data.name}</li>
-							</div>
-						);
-					})} */}
 					{items.length < 1 ? (
 						<p className="shopping-cart-none">Keranjang belanja Anda kosong</p>
 					) : (
