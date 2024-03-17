@@ -4,10 +4,10 @@
 // import Swal from "sweetalert2";
 // import Icon from "@mui/material/Icon";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
-import useCart from "../../hooks/useCart";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
+import useCart from '../../hooks/useCart';
 
 const ShoppingCartItem = ({ data }: any) => {
 	const { removeProduct } = useCart();

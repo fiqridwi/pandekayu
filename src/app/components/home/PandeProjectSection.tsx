@@ -1,7 +1,7 @@
-import pandeProject from "public/images/project-1.jpg";
-import Image from "next/image";
-import Button from "../shared/Button";
-import { faPenRuler } from "@fortawesome/free-solid-svg-icons";
+import pandeProject from '/public/images/project-1.jpg';
+import Image from 'next/image';
+import Button from '../shared/Button';
+import { faPenRuler } from '@fortawesome/free-solid-svg-icons';
 
 export default function PandeProjectSection() {
 	return (
@@ -16,7 +16,12 @@ export default function PandeProjectSection() {
 				</div>
 
 				<div className="project-button">
-					<Button title="Buat Sekarang" icon={faPenRuler} color="button-black"></Button>
+					<Button
+						title="Buat Sekarang"
+						icon={faPenRuler}
+						color="button-black"
+						link="/pande-projects"
+					></Button>
 				</div>
 			</div>
 		</div>

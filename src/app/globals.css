@@ -100,7 +100,7 @@ html {
 body {
 	box-sizing: border-box;
 	/* padding: 3rem; */
-	font-family: "Poppins", sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 	/*font-size: 16px;*/
 	line-height: 1.4;
@@ -173,7 +173,7 @@ nav {
 }
 .nav-cart-value {
 	position: absolute;
-	right: -3px;
+	right: -7px;
 	background-color: #f9ca24;
 	border-radius: 50px;
 	height: 2rem;

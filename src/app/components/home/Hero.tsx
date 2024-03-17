@@ -1,10 +1,10 @@
-import heroImage1 from "@/public/images/products/13.jpg";
-import heroImage2 from "@/public/images/products/17.jpg";
-import heroImage3 from "@/public/images/products/22.jpg";
-import Image from "next/image";
-import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import heroImage1 from '@/public/images/products/13.jpg';
+import heroImage2 from '@/public/images/products/17.jpg';
+import heroImage3 from '@/public/images/products/22.jpg';
+import Image from 'next/image';
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
-import Button from "../shared/Button";
+import Button from '../shared/Button';
 
 const Hero = () => {
 	return (
@@ -16,7 +16,12 @@ const Hero = () => {
 					berkualitas namun dengan harga yang terjangkau.
 				</p>
 				<div className="hero-button">
-					<Button title="Mulai Belanja" icon={faCartPlus} color="button-yellow" />
+					<Button
+						title="Mulai Belanja"
+						icon={faCartPlus}
+						color="button-yellow"
+						link="/products"
+					/>
 				</div>
 			</div>
 
